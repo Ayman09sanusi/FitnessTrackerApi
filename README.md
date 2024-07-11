@@ -1,8 +1,6 @@
 # FitnessTrackerApi
 Ayman Sanusi BU/22C/IT/7415
 
-FitnessTrackerAPI is a simple ASP.NET Core Web API for managing workouts and exercises. This API supports basic CRUD operations and uses Entity Framework Core with an in-memory database for data storage.
-
  Getting Started
 
 Prerequisites
@@ -12,12 +10,12 @@ Prerequisites
 
 Setting Up the Project
 
-1. Create a New ASP.NET Core Web API Project**
+1. Create a New ASP.NET Core Web API Project
     - Open Visual Studio 2022.
     - Create a new project: **ASP.NET Core Web API**.
     - Name it `FitnessTrackerAPI`.
 
-2. Add Entity Framework Core In-Memory Database**
+2. Add Entity Framework Core In-Memory Database
     - In the `FitnessTrackerAPI` project, add the necessary NuGet packages:
       
       dotnet add package Microsoft.EntityFrameworkCore.InMemory
