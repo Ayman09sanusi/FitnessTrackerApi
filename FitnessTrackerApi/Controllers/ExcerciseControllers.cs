@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitnessTrackerAPI.Data;
 using FitnessTrackerAPI.Models;
@@ -17,12 +17,15 @@ namespace FitnessTrackerAPI.Controllers
         public ExercisesController(FitnessTrackerContext context)
         {
             _context = context;
+            _context.Database.EnsureCreated();
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Exercise>>> GetExercises()
         {
             return await _context.Exercises.ToListAsync();
+            _context.Database.EnsureCreated();
+
         }
 
         [HttpGet("{id}")]
