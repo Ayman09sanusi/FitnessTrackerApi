@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitnessTrackerAPI.Data;
 using FitnessTrackerAPI.Models;
@@ -17,6 +17,8 @@ namespace FitnessTrackerAPI.Controllers
         public WorkoutsController(FitnessTrackerContext context)
         {
             _context = context;
+            _context.Database.EnsureCreated();
+
         }
 
         [HttpGet]
